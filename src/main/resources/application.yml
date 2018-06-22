@@ -1,0 +1,21 @@
+# Configuración del Servidor de Descubrimiento
+eureka:
+  instance:
+    hostname: localhost
+  client:  # No es una aplicación cliente de Eureka, no hay que registrarla
+    registerWithEureka: false
+    fetchRegistry: false
+
+server:
+  port: 1001   # HTTP (Tomcat) port
+
+# Servidor de Descubrimiento con Freemarker, se deshabilita thymeleaf.
+spring:
+  thymeleaf:
+    enabled: false
+    
+logging:
+ level:
+  org:
+   springframework:
+    web: INFO
